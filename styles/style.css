@@ -1,0 +1,116 @@
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.animations {
+  width: 100vw;
+  height: 900px;
+  z-index: -9;
+  background-color: skyblue;
+  background-position: center;
+}
+
+.sky-left{
+  background-image: url(../images/image-from-rawpixel-id-6117915-original.png);
+  z-index: 1;
+  background-position: center;
+  background-size: contain;
+  animation-name: photo-left;
+  animation-direction: alternate;
+  background-color: transparent;
+  animation-duration: 20s;
+  position: relative;
+  top: -1200px;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.sky-right{
+  background-image: url(../images/image-from-rawpixel-id-6117915-original.png);
+  z-index: 1;
+  position: relative;
+  
+  background-position: center;
+  background-size: contain;
+  animation-name: photo;
+  animation-direction: alternate;
+  background-color: transparent;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+
+
+.plane {
+  width: 70px;
+  height: 50px;
+  animation-name: plane;
+  animation-duration: 13s;
+  z-index: 1;
+  position: relative;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  background-color: transparent;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes photo {
+  from {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 1%;
+    animation-direction: alternate;
+  }
+
+  to {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    rotate: 0deg;
+    left: 10%;
+  }
+}
+
+@keyframes photo-left {
+  from {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: -90%;
+    animation-direction: alternate;
+  }
+
+  to {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform:none;
+    left: 10%;
+  }
+}
+@keyframes plane {
+  from {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    top: -1150px;
+    left: -500px;
+    animation-direction: alternate;
+  }
+
+  to {
+    width: 50%;
+    height: 50%;
+    top: -2000px;
+    position: relative;
+    transform:rotate(-45deg);
+    rotate: 0deg;
+    left: 700px;
+  }
+}
